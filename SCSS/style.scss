@@ -1,0 +1,138 @@
+// sass --watch ./SCSS/style.scss:./CSS/style.css 
+@import "variables_overrides";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+//polices personnalisées
+@font-face
+{
+    font-family: "titles";
+    src: url("../ressources/fonts/typewcond_regular.otf") format("opentype");
+}
+
+@font-face
+{
+    font-family: "base";
+    src: url("../ressources/fonts/Quicksand-Regular.otf") format("opentype");
+}
+
+// formatage texte
+*
+{
+    font-family: "base";
+    font-weight: bold;
+}
+*:focus
+{
+    border: 3px solid $primary;
+}
+a
+{
+    text-decoration:none;
+}
+
+strong
+{
+    font-size: 130%;
+}
+
+h1,h2,h3,h4,h5
+{
+    font-family: "titles";
+    color: $primary;
+}
+
+//gestion photo de profil
+
+#profilePic
+{
+    object-fit:scale-down;
+    width: auto;
+    height: 150px;
+}
+
+// style progress bar
+progress
+{
+    height: 15px ;
+}
+
+// dimensionnement images
+.card-img-top
+{
+    height: 150px;
+    width: auto;
+    object-fit:scale-down;
+    object-position: center;
+}
+
+//dimensionnement et positionnement icônes
+.card i
+{
+    position: absolute; bottom: 0px; right: 0px;
+    font-size: 3em;
+}
+
+.fa-linkedin, .fa-github-square
+{
+    font-size: xx-large;
+    color: $primary;
+    position: inherit;
+}
+
+//dimensionnement et positionnement drapeaux
+.flag{
+    width: 15%;
+    min-width: 35px ;
+    margin-top: 17px;
+}
+
+.flag-mini{
+    width: 35px;
+}
+
+
+//animations d'apparition: ajouter classe anim aux éléments à faire apparaître
+$dureeApparition:1000ms;
+.anim
+{
+    
+    animation: apparition $dureeApparition 0s;
+    animation-fill-mode: forwards;
+}
+
+//Animations
+@keyframes apparition
+{
+  0%
+  {
+    transform: translateY(200%);
+    opacity: 0;
+  } 
+  45%
+  {
+    transform: translateY(-5%);
+  }
+  100%
+  {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.animTitle
+{
+    cursor: pointer;
+}
+
+//mediaqueries pour custom responsive lg
+@media (max-width:992px)
+{
+    i
+    {
+        position: absolute; bottom: -15px; right: 15px;
+        font-size: 2em;
+    }
+}

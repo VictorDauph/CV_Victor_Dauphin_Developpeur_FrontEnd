@@ -10800,7 +10800,7 @@ progress {
   font-size: 3em;
 }
 
-#interest i {
+#interest p i {
   position: relative;
   bottom: auto;
   right: auto;

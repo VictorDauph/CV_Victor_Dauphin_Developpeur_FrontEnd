@@ -67,10 +67,20 @@ progress
 }
 
 //dimensionnement et positionnement icônes
-.card i
+.card 
 {
-    position: absolute; bottom: 0px; right: 0px;
-    font-size: 3em;
+    i{
+        position: absolute; bottom: 0px; right: 0px;
+        font-size: 3em;
+    }
+
+}
+
+#interest i{
+
+    position: relative; bottom: auto; right: auto;
+    font-size: 2em;
+    vertical-align: middle;
 }
 
 .fa-linkedin, .fa-github-square
